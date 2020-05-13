@@ -10,7 +10,8 @@
 	</okdServiceLogin>
     
     <administrator-role>
-        <group-access-id>group:okd123/test-token-1</group-access-id>
+        <!-- Change "my-namespace" to the name of the namespace for your deployment" -->
+        <group-access-id>group:okd123/my-namespace</group-access-id>
     </administrator-role>
 
     <httpEndpoint host="*" httpPort="${default.http.port}" 
