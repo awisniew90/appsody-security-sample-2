@@ -1,0 +1,20 @@
+<server description="Liberty server">
+    <featureManager>
+        <feature>microProfile-3.2</feature>
+        <feature>appSecurity-3.0</feature>
+        <feature>socialLogin-1.0</feature>
+    </featureManager>
+    
+    <okdServiceLogin
+    	realmName="okd123" >
+	</okdServiceLogin>
+    
+    <administrator-role>
+        <group-access-id>group:okd123/test-token-1</group-access-id>
+    </administrator-role>
+
+    <httpEndpoint host="*" httpPort="${default.http.port}" 
+        httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
+    
+    <webApplication location="starter-app.war" contextRoot="/"/>
+</server>
