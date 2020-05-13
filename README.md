@@ -36,6 +36,8 @@ In `server.xml`, there are several changes made to enable authentication via ser
 
 This app defines a monitoring spec that the OL Operator will use to create a Prometheus Service Monitor. This configuration has Prometheus add a Bearer Token to the Authorization header of each scrape request (e.g. "Authorization: Bearer <token>"). The token is taken from the Secret "my-token-secret" which exists within the Service Account created in the prereq above. 
 
+NOTE: This is currently blocked by https://github.com/OpenLiberty/open-liberty-operator/issues/157
+
 ```yaml
 monitoring:
     endpoints:
